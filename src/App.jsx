@@ -14,6 +14,7 @@ import Reception from './components/Reception';
 import Appreciation from './components/Appreciation';
 import Footer from './components/Footer';
 import Loader from './components/Loader';
+import Navigation from './components/Navigation';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,41 +40,43 @@ function App() {
         height: isLoading ? '100vh' : 'auto',
         overflow: isLoading ? 'hidden' : 'visible'
       }}>
+        <Navigation />
+
         {/* Split Screen Hero with ADEPA '25 */}
-        <SplitScreenHero />
+        <div id="home"><SplitScreenHero /></div>
 
         {/* Couple Names Hero */}
-        <Hero />
+        <div id="welcome"><Hero /></div>
 
         {/* Welcome Message Section */}
         <WelcomeMessage />
 
         {/* Our Love Story */}
-        <LoveStory />
+        <div id="lovestory"><LoveStory /></div>
 
         {/* The Proposal */}
-        <ProposalStory />
+        <div id="proposal"><ProposalStory /></div>
 
         {/* Our Journey in Photos */}
-        <JourneyGallery />
+        <div id="journey"><JourneyGallery /></div>
 
         {/* Functionaries */}
-        <Functionaries />
+        <div id="functionaries"><Functionaries /></div>
 
         {/* Order of Service */}
-        <OrderOfService />
+        <div id="order-of-service"><OrderOfService /></div>
 
         {/* Photography Order */}
-        <PhotographyOrder />
+        <div id="photography"><PhotographyOrder /></div>
 
         {/* Pre-Wedding Photos */}
-        <PreWeddingGallery />
+        <div id="pre-wedding"><PreWeddingGallery /></div>
 
         {/* Reception */}
-        <Reception />
+        <div id="reception"><Reception /></div>
 
         {/* Appreciation */}
-        <Appreciation />
+        <div id="appreciation"><Appreciation /></div>
 
         {/* Footer */}
         <Footer />
