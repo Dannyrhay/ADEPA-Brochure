@@ -37,7 +37,6 @@ const Navigation = () => {
         { title: "Welcome", href: "#welcome" },
         { title: "Love Story", href: "#lovestory" },
         { title: "Proposal", href: "#proposal" },
-        { title: "Our Journey", href: "#journey" },
         { title: "Functionaries", href: "#functionaries" },
         { title: "Order of Service", href: "#order-of-service" },
         { title: "Photography", href: "#photography" },

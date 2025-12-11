@@ -1,47 +1,43 @@
 import React from 'react';
 
 const LoveStory = () => {
-    return (
-        <section className="love-story">
-            <div className="container">
-                <div className="love-story__header">
-                    <span className="love-story__label">Chapter One</span>
-                    <h2 className="love-story__title">Our Love Story</h2>
-                    <div className="love-story__divider"></div>
-                </div>
+  return (
+    <section className="love-story">
+      <div className="container">
+        <div className="love-story__header">
+          <span className="love-story__label">Chapter One</span>
+          <h2 className="love-story__title">Our Love Story</h2>
+          <div className="love-story__divider"></div>
+        </div>
 
-                <div className="love-story__content">
-                    <div className="love-story__text">
-                        <p>
-                            Our journey began at the <strong>University of Media, Arts and Communication</strong>,
-                            where we met as course mates during our master's program. Adelaide was the very first
-                            friend Emmanuel made in class, and what started as a simple friendship quickly
-                            blossomed into a special bond.
-                        </p>
-                        <p>
-                            Along with two other colleagues, we became an inseparable group known as
-                            <span className="love-story__highlight"> AAYALOLO</span>. We sat close in class,
-                            studied together for exams, and were often paired in the same work groups.
-                        </p>
-                        <p>
-                            Beyond academics, our connection deepened as we shared the same faith and attended
-                            prayer meetings together. Through these moments of laughter, learning, and fellowship,
-                            our friendship quietly grew into something beautiful.
-                        </p>
-                        <p className="love-story__closing">
-                            Little did we know, God was weaving a love story far greater than we ever imagined.
-                        </p>
-                    </div>
-                    <div className="love-story__decoration">
-                        <div className="love-story__frame">
-                            <div className="love-story__icon">♥</div>
-                            <span className="love-story__year">2023</span>
-                        </div>
-                    </div>
-                </div>
+        <div className="love-story__content">
+          <div className="love-story__text">
+            <p>
+              Our journey began at the <strong>University of Media, Arts and Communication</strong>,
+              where we met as course mates during our master's program. Adelaide was the very first
+              friend Emmanuel made in class, and what started as a simple friendship quickly
+              blossomed into a special bond.
+            </p>
+
+            <p>
+              Beyond academics, our connection deepened as we shared the same faith and attended
+              prayer meetings together. Through these moments of laughter, learning, and fellowship,
+              our friendship quietly grew into something beautiful.
+            </p>
+            <p className="love-story__closing">
+              Little did we know, God was weaving a love story far greater than we ever imagined.
+            </p>
+          </div>
+          <div className="love-story__decoration">
+            <div className="love-story__frame">
+              <div className="love-story__icon">♥</div>
+              <span className="love-story__year">2023</span>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <style>{`
+      <style>{`
         .love-story {
           padding: var(--section-padding) 0;
           background: linear-gradient(180deg, var(--color-background-alt) 0%, var(--color-background) 100%);
@@ -176,8 +172,8 @@ const LoveStory = () => {
           }
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default LoveStory;

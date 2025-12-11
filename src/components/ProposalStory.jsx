@@ -1,59 +1,41 @@
 import React from 'react';
 
 const ProposalStory = () => {
-    return (
-        <section className="proposal">
-            <div className="container">
-                <div className="proposal__header">
-                    <span className="proposal__label">Chapter Two</span>
-                    <h2 className="proposal__title">The Proposal</h2>
-                    <div className="proposal__divider"></div>
-                </div>
+  return (
+    <section className="proposal">
+      <div className="container">
+        <div className="proposal__header">
+          <span className="proposal__label">Chapter Two</span>
+          <h2 className="proposal__title">The Proposal</h2>
+          <div className="proposal__divider"></div>
+        </div>
 
-                <div className="proposal__content">
-                    <div className="proposal__date-badge">
-                        <span className="proposal__date-day">1</span>
-                        <span className="proposal__date-month">November</span>
-                        <span className="proposal__date-year">2025</span>
-                    </div>
+        {/* Content removed as requested, only video remains */}
 
-                    <div className="proposal__story">
-                        <p>
-                            On the morning of November 1, 2025, what was meant to be a simple birthday breakfast
-                            celebration for Esi turned into one of the most beautiful surprises of our lives.
-                        </p>
-                        <p>
-                            Adelaide, dressed elegantly and full of excitement, was convinced by her friends to
-                            be the first to step outside the room to take pictures. As she opened the door at
-                            around <strong>10:30 a.m.</strong>, she was stunned to see Emmanuel standing at the
-                            gate holding flowers and a ring.
-                        </p>
+        <div className="proposal-story__video-container">
+          <div className="proposal-story__video-placeholder">
+            <span className="proposal-story__video-icon">▶</span>
+            <p>Proposal Video Coming Soon</p>
+          </div>
+          {/* 
+                  To add the video later, replace the above placeholder div with:
+                  <video controls className="proposal-story__video">
+                      <source src="path/to/your/video.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                  </video>
+                */}
+        </div>
 
-                        <blockquote className="proposal__quote">
-                            <span className="proposal__quote-mark">"</span>
-                            You mentioned you were going to work this morning. You told me you wouldn't lie to
-                            me— why did you lie?
-                            <span className="proposal__quote-mark">"</span>
-                        </blockquote>
+        <div className="proposal__ring">
+          <svg className="proposal__ring-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="60" r="25" stroke="currentColor" strokeWidth="3" fill="none" />
+            <path d="M50 35 L40 20 L50 5 L60 20 Z" fill="currentColor" />
+            <circle cx="50" cy="15" r="8" fill="var(--color-secondary)" />
+          </svg>
+        </div>
+      </div>
 
-                        <p>
-                            Amid laughter and happy tears, Emmanuel went down on one knee and asked her to be
-                            his forever. With joy overflowing in her heart, <strong>she said yes</strong>, marking
-                            the beginning of their beautiful journey to forever.
-                        </p>
-                    </div>
-                </div>
-
-                <div className="proposal__ring">
-                    <svg className="proposal__ring-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="60" r="25" stroke="currentColor" strokeWidth="3" fill="none" />
-                        <path d="M50 35 L40 20 L50 5 L60 20 Z" fill="currentColor" />
-                        <circle cx="50" cy="15" r="8" fill="var(--color-secondary)" />
-                    </svg>
-                </div>
-            </div>
-
-            <style>{`
+      <style>{`
         .proposal {
           padding: var(--section-padding) 0;
           background: var(--color-surface);
@@ -194,9 +176,37 @@ const ProposalStory = () => {
             padding: 1.5rem;
           }
         }
+
+        .proposal-story__video-container {
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 16/9;
+            background: rgba(0,0,0,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--color-secondary);
+            margin: 0 auto; /* Center horizontally */
+        }
+
+        .proposal-story__video-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            color: var(--color-text-muted);
+        }
+
+        .proposal-story__video-icon {
+            font-size: 3rem;
+            color: var(--color-secondary);
+            opacity: 0.7;
+        }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default ProposalStory;

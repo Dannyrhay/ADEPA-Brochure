@@ -1,141 +1,141 @@
 import React from 'react';
 
 const Functionaries = () => {
-    const clergy = [
-        { name: 'Very Rev. Dr. Abraham Boateng', title: 'Counselor and Lecturer, Trinity Theological Seminary' },
-        { name: 'Rev. Patrick Darko', title: 'Gen. Superintendent ETBM' },
-        { name: 'Prophet Stephen ASK Ackrong', title: 'Focus Outreach Ministry' },
-        { name: 'Apostle Stephen Gyan', title: 'Kings Love Chapel International' },
-        { name: 'Pastor Nathaniel Osei Appiah', title: 'Elaia City Church' },
-        { name: 'Rev. Kofi Asante', title: 'Elaia City Church' },
-        { name: 'Rev. Amponsah Baah', title: 'Elaia City Church' },
-        { name: 'Rev. Prof. Benjamin Abuaku', title: 'Elaia City Church' },
-        { name: 'Rev. Degraft Donkor', title: 'GPCC Mataheko Zone Chairman and Head Pas. Assemblies Of God' },
-        { name: 'Pastor John Eduful', title: '' },
-        { name: 'Pastor Felix Godson Addo', title: '' },
-        { name: 'Pastor George Nkansah', title: '' },
-        { name: 'Pastor Samuel Otabil', title: 'Seventh Day Adventist, Swedru' },
-    ];
+  const clergy = [
+    { name: 'Very Rev. Dr. Abraham Boateng', title: 'Counselor and Lecturer, Trinity Theological Seminary' },
+    { name: 'Rev. Patrick Darko', title: 'Gen. Superintendent ETBM' },
+    { name: 'Prophet Stephen ASK Ackrong', title: 'Focus Outreach Ministry' },
+    { name: 'Apostle Stephen Gyan', title: 'Kings Love Chapel International' },
+    { name: 'Pastor Nathaniel Osei Appiah', title: 'Elaia City Church' },
+    { name: 'Rev. Kofi Asante', title: 'Elaia City Church' },
+    { name: 'Rev. Amponsah Baah', title: 'Elaia City Church' },
+    { name: 'Rev. Prof. Benjamin Abuaku', title: 'Elaia City Church' },
+    { name: 'Rev. Degraft Donkor', title: 'GPCC Mataheko Zone Chairman and Head Pas. Assemblies Of God' },
+    { name: 'Pastor John Eduful', title: '' },
+    { name: 'Pastor Felix Godson Addo', title: '' },
+    { name: 'Pastor George Nkansah', title: '' },
+    { name: 'Pastor Samuel Otabil', title: 'Seventh Day Adventist, Swedru' },
+  ];
 
-    const choirs = ['Youth Choir', 'TM Cube', 'Angelic Voices'];
+  const choirs = ['Youth Choir', 'TM Cube', 'Angelic Voices'];
 
-    const bridalTeam = ['Portia Darko', 'Priscilla Sangbey', 'Eunice Pera Amobire', 'Amanda Otuwa'];
+  const bridalTeam = ['Portia Darko', 'Priscilla Sangbey', 'Eunice Pera Amobire', 'Amanda Otuwa'];
 
-    const groomsmen = ['Erasmus Sam', 'Cephas Patrick Darko', 'Ebenezer Paintsil', 'Deborah Naa Norley Adom'];
+  const groomsmen = ['Erasmus Sam', 'Cephas Patrick Darko', 'Ebenezer Paintsil', 'Deborah Naa Norley Adom'];
 
-    const champagnePoppers = [
-        'Tracy Amo Nyarko', 'Joana Ofosu Ansah', 'Selasie Atani', 'Abraham Ofori Henaku',
-        'Benjamin Degraft Donkor', 'Kwaku Sarpong Debrah', 'Erasmus Sam', 'Baaba Daniels',
-        'Enoch Zoli', 'Derrick Opoku', 'Neil Armstrong Mortagbe'
-    ];
+  const champagnePoppers = [
+    'Yohannes Dorgbazi', 'Barbara Armah', 'Selasie Atani', 'Abraham Ofori Henaku',
+    'Benjamin Degraft Donkor', 'Kwaku Sarpong Debrah', 'Erasmus Sam', 'Baaba Daniels',
+    'Enoch Zoli', 'Derrick Opoku', 'Neil Armstrong Mortagbe'
+  ];
 
-    const mcs = ['Joshua Koodjo Mensah', 'Grace Baah Buckman (BuckmanVoicedIt)'];
+  const mcs = ['Tracy Amo Nyarko', 'Grace Baah Buckman (BuckmanVoicedIt)'];
 
-    return (
-        <section className="functionaries">
-            <div className="container">
-                <div className="functionaries__header">
-                    <h2 className="functionaries__title">Functionaries</h2>
-                    <div className="functionaries__divider"></div>
-                </div>
+  return (
+    <section className="functionaries">
+      <div className="container">
+        <div className="functionaries__header">
+          <h2 className="functionaries__title">Functionaries</h2>
+          <div className="functionaries__divider"></div>
+        </div>
 
-                {/* Couple Section */}
-                <div className="functionaries__couple">
-                    <div className="functionaries__couple-card functionaries__couple-card--groom">
-                        <span className="functionaries__role-label">Groom</span>
-                        <h3 className="functionaries__couple-name">Emmanuel Paintsil</h3>
-                    </div>
-                    <div className="functionaries__couple-heart">♥</div>
-                    <div className="functionaries__couple-card functionaries__couple-card--bride">
-                        <span className="functionaries__role-label">Bride</span>
-                        <h3 className="functionaries__couple-name">Adelaide M. S. Darko</h3>
-                    </div>
-                </div>
+        {/* Couple Section */}
+        <div className="functionaries__couple">
+          <div className="functionaries__couple-card functionaries__couple-card--groom">
+            <span className="functionaries__role-label">Groom</span>
+            <h3 className="functionaries__couple-name">Emmanuel Paintsil</h3>
+          </div>
+          <div className="functionaries__couple-heart">♥</div>
+          <div className="functionaries__couple-card functionaries__couple-card--bride">
+            <span className="functionaries__role-label">Bride</span>
+            <h3 className="functionaries__couple-name">Adelaide M. S. Darko</h3>
+          </div>
+        </div>
 
-                {/* Best Man & Maid of Honor */}
-                <div className="functionaries__honor">
-                    <div className="functionaries__honor-card">
-                        <span className="functionaries__role-badge">Best Man</span>
-                        <p className="functionaries__honor-name">Eric Annor Nyinaku</p>
-                    </div>
-                    <div className="functionaries__honor-card">
-                        <span className="functionaries__role-badge">Maid of Honor</span>
-                        <p className="functionaries__honor-name">Hannah Amoako Attah</p>
-                    </div>
-                </div>
+        {/* Best Man & Maid of Honor */}
+        <div className="functionaries__honor">
+          <div className="functionaries__honor-card">
+            <span className="functionaries__role-badge">Best Man</span>
+            <p className="functionaries__honor-name">Eric Annor Nyinaku</p>
+          </div>
+          <div className="functionaries__honor-card">
+            <span className="functionaries__role-badge">Maid of Honor</span>
+            <p className="functionaries__honor-name">Hannah Amoako Attah</p>
+          </div>
+        </div>
 
-                {/* Teams Grid */}
-                <div className="functionaries__grid">
-                    <div className="functionaries__card">
-                        <h4 className="functionaries__card-title">Bridal Team</h4>
-                        <ul className="functionaries__list">
-                            {bridalTeam.map((name, i) => (
-                                <li key={i} className="functionaries__list-item">{name}</li>
-                            ))}
-                        </ul>
-                    </div>
+        {/* Teams Grid */}
+        <div className="functionaries__grid">
+          <div className="functionaries__card">
+            <h4 className="functionaries__card-title">Bridal Team</h4>
+            <ul className="functionaries__list">
+              {bridalTeam.map((name, i) => (
+                <li key={i} className="functionaries__list-item">{name}</li>
+              ))}
+            </ul>
+          </div>
 
-                    <div className="functionaries__card">
-                        <h4 className="functionaries__card-title">Groomsmen</h4>
-                        <ul className="functionaries__list">
-                            {groomsmen.map((name, i) => (
-                                <li key={i} className="functionaries__list-item">{name}</li>
-                            ))}
-                        </ul>
-                    </div>
+          <div className="functionaries__card">
+            <h4 className="functionaries__card-title">Groomsmen</h4>
+            <ul className="functionaries__list">
+              {groomsmen.map((name, i) => (
+                <li key={i} className="functionaries__list-item">{name}</li>
+              ))}
+            </ul>
+          </div>
 
-                    <div className="functionaries__card">
-                        <h4 className="functionaries__card-title">Choirs</h4>
-                        <ul className="functionaries__list">
-                            {choirs.map((name, i) => (
-                                <li key={i} className="functionaries__list-item">{name}</li>
-                            ))}
-                        </ul>
-                    </div>
+          <div className="functionaries__card">
+            <h4 className="functionaries__card-title">Choirs</h4>
+            <ul className="functionaries__list">
+              {choirs.map((name, i) => (
+                <li key={i} className="functionaries__list-item">{name}</li>
+              ))}
+            </ul>
+          </div>
 
-                    <div className="functionaries__card">
-                        <h4 className="functionaries__card-title">MC</h4>
-                        <ul className="functionaries__list">
-                            {mcs.map((name, i) => (
-                                <li key={i} className="functionaries__list-item">{name}</li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
+          <div className="functionaries__card">
+            <h4 className="functionaries__card-title">MC</h4>
+            <ul className="functionaries__list">
+              {mcs.map((name, i) => (
+                <li key={i} className="functionaries__list-item">{name}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
 
-                {/* Champagne Poppers */}
-                <div className="functionaries__poppers">
-                    <h4 className="functionaries__section-title">Champagne Poppers</h4>
-                    <div className="functionaries__poppers-grid">
-                        {champagnePoppers.map((name, i) => (
-                            <span key={i} className="functionaries__popper-tag">{name}</span>
-                        ))}
-                    </div>
-                </div>
+        {/* Champagne Poppers */}
+        <div className="functionaries__poppers">
+          <h4 className="functionaries__section-title">Champagne Poppers</h4>
+          <div className="functionaries__poppers-grid">
+            {champagnePoppers.map((name, i) => (
+              <span key={i} className="functionaries__popper-tag">{name}</span>
+            ))}
+          </div>
+        </div>
 
-                {/* Officiating Clergy */}
-                <div className="functionaries__clergy">
-                    <h4 className="functionaries__section-title">Officiating Clergy</h4>
-                    <div className="functionaries__clergy-list">
-                        {clergy.map((person, i) => (
-                            <div key={i} className="functionaries__clergy-item">
-                                <span className="functionaries__clergy-name">{person.name}</span>
-                                {person.title && <span className="functionaries__clergy-title">{person.title}</span>}
-                            </div>
-                        ))}
-                    </div>
-                </div>
+        {/* Officiating Clergy */}
+        <div className="functionaries__clergy">
+          <h4 className="functionaries__section-title">Officiating Clergy</h4>
+          <div className="functionaries__clergy-list">
+            {clergy.map((person, i) => (
+              <div key={i} className="functionaries__clergy-item">
+                <span className="functionaries__clergy-name">{person.name}</span>
+                {person.title && <span className="functionaries__clergy-title">{person.title}</span>}
+              </div>
+            ))}
+          </div>
+        </div>
 
-                {/* Cake Cutting */}
-                <div className="functionaries__special">
-                    <div className="functionaries__special-card">
-                        <span className="functionaries__special-label">Cutting of Cake</span>
-                        <p className="functionaries__special-names">Mrs. Kate Nkrumah & Mrs. Dorcas Ackrong</p>
-                    </div>
-                </div>
-            </div>
+        {/* Cake Cutting */}
+        <div className="functionaries__special">
+          <div className="functionaries__special-card">
+            <span className="functionaries__special-label">Cutting of Cake</span>
+            <p className="functionaries__special-names">Mrs. Kate Nkrumah & Mrs. Dorcas Ackrong</p>
+          </div>
+        </div>
+      </div>
 
-            <style>{`
+      <style>{`
         .functionaries {
           padding: var(--section-padding) 0;
           background: linear-gradient(180deg, var(--color-background) 0%, var(--color-background-alt) 100%);
@@ -393,8 +393,8 @@ const Functionaries = () => {
           }
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default Functionaries;

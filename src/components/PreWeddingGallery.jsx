@@ -1,45 +1,75 @@
 import React from 'react';
+import imgGS from '../assets/GS.jpg';
+import imgGS18 from '../assets/GS _18.jpg';
+import imgGS10 from '../assets/GS _10.jpg';
+import imgGS4 from '../assets/GS _4.jpg';
+import imgGS7 from '../assets/GS _7.jpg';
 
 const PreWeddingGallery = () => {
-    // Placeholder images - will be replaced with actual pre-wedding photos  
-    const images = [
-        { id: 1, aspect: 'square' },
-        { id: 2, aspect: 'square' },
-        { id: 3, aspect: 'square' },
-        { id: 4, aspect: 'wide' },
-        { id: 5, aspect: 'wide' },
-    ];
+  const [selectedImage, setSelectedImage] = React.useState(null);
 
-    return (
-        <section className="prewedding-gallery">
-            <div className="prewedding-gallery__header">
-                <div className="prewedding-gallery__header-content">
-                    <h2 className="prewedding-gallery__title">Pre-Wedding Photos</h2>
-                    <p className="prewedding-gallery__subtitle">
-                        A glimpse into our love story — the moments leading up to our forever.
-                    </p>
-                </div>
+  // Actual pre-wedding photos
+  const images = [
+    { id: 1, src: imgGS, aspect: 'square', alt: 'Pre-wedding photo 1' },
+    { id: 2, src: imgGS18, aspect: 'square', alt: 'Pre-wedding photo 2' },
+    { id: 3, src: imgGS10, aspect: 'square', alt: 'Pre-wedding photo 3' },
+    { id: 4, src: imgGS4, aspect: 'wide', alt: 'Pre-wedding photo 4' },
+    { id: 5, src: imgGS7, aspect: 'wide', alt: 'Pre-wedding photo 5' },
+  ];
+
+  const openLightbox = (image) => {
+    setSelectedImage(image);
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+  };
+
+  const closeLightbox = () => {
+    setSelectedImage(null);
+    document.body.style.overflow = 'auto'; // Restore scrolling
+  };
+
+  return (
+    <section className="prewedding-gallery" id="prewedding">
+      <div className="prewedding-gallery__header">
+        <div className="prewedding-gallery__header-content">
+          <h2 className="prewedding-gallery__title">Pre-Wedding Photos</h2>
+          <p className="prewedding-gallery__subtitle">
+            A glimpse into our love story — the moments leading up to our forever.
+          </p>
+        </div>
+      </div>
+
+      <div className="prewedding-gallery__grid">
+        {images.map((image, index) => (
+          <div
+            key={image.id}
+            className={`prewedding-gallery__item prewedding-gallery__item--${image.aspect}`}
+            style={{ animationDelay: `${index * 0.1}s` }}
+            onClick={() => openLightbox(image)}
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="prewedding-gallery__image"
+              loading="lazy"
+            />
+            <div className="prewedding-gallery__overlay">
+              <span className="prewedding-gallery__zoom-icon">+</span>
             </div>
+          </div>
+        ))}
+      </div>
 
-            <div className="prewedding-gallery__grid">
-                {images.map((image, index) => (
-                    <div
-                        key={image.id}
-                        className={`prewedding-gallery__item prewedding-gallery__item--${image.aspect}`}
-                        style={{ animationDelay: `${index * 0.1}s` }}
-                    >
-                        <div className="prewedding-gallery__placeholder">
-                            <span className="prewedding-gallery__placeholder-icon">💕</span>
-                            <span className="prewedding-gallery__placeholder-text">Pre-Wedding {image.id}</span>
-                        </div>
-                        <div className="prewedding-gallery__overlay">
-                            <span className="prewedding-gallery__zoom-icon">+</span>
-                        </div>
-                    </div>
-                ))}
-            </div>
+      {/* Lightbox Overlay */}
+      {selectedImage && (
+        <div className="lightbox" onClick={closeLightbox}>
+          <div className="lightbox__content" onClick={(e) => e.stopPropagation()}>
+            <button className="lightbox__close" onClick={closeLightbox}>&times;</button>
+            <img src={selectedImage.src} alt={selectedImage.alt} className="lightbox__image" />
+          </div>
+        </div>
+      )}
 
-            <style>{`
+      <style>{`
         .prewedding-gallery {
           background: linear-gradient(180deg, var(--color-surface-dark) 0%, #252525 100%);
           padding: var(--section-padding) clamp(1rem, 4vw, 2rem);
@@ -110,37 +140,23 @@ const PreWeddingGallery = () => {
           grid-column: span 1;
         }
 
-        .prewedding-gallery__placeholder {
+        .prewedding-gallery__image {
           width: 100%;
           height: 100%;
-          background: linear-gradient(135deg, 
-            rgba(232, 160, 191, 0.3) 0%, 
-            rgba(45, 90, 39, 0.2) 50%,
-            rgba(242, 153, 74, 0.3) 100%
-          );
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          gap: 0.5rem;
+          object-fit: cover;
+          display: block;
+          transition: transform var(--transition-slow);
         }
 
-        .prewedding-gallery__placeholder-icon {
-          font-size: 2.5rem;
-          opacity: 0.5;
-        }
-
-        .prewedding-gallery__placeholder-text {
-          font-family: var(--font-body);
-          font-size: 0.9rem;
-          color: rgba(255, 255, 255, 0.5);
+        .prewedding-gallery__item:hover .prewedding-gallery__image {
+          transform: scale(1.1);
         }
 
         .prewedding-gallery__overlay {
           position: absolute;
           inset: 0;
-          background: linear-gradient(135deg, 
-            rgba(232, 160, 191, 0.4) 0%, 
+          background: linear-gradient(135deg,
+            rgba(232, 160, 191, 0.4) 0%,
             rgba(45, 90, 39, 0.4) 100%
           );
           display: flex;
@@ -177,6 +193,62 @@ const PreWeddingGallery = () => {
           transform: scale(1);
         }
 
+        /* Lightbox Styles */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            animation: fadeIn 0.3s ease-out;
+            backdrop-filter: blur(5px);
+        }
+
+        .lightbox__content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+        }
+
+        .lightbox__image {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            animation: scaleIn 0.3s ease-out;
+        }
+
+        .lightbox__close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            line-height: 1;
+            transition: color 0.3s;
+        }
+
+        .lightbox__close:hover {
+            color: var(--color-secondary);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
         @media (max-width: 900px) {
           .prewedding-gallery__grid {
             grid-template-columns: repeat(2, 1fr);
@@ -210,8 +282,8 @@ const PreWeddingGallery = () => {
           }
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default PreWeddingGallery;

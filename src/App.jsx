@@ -5,7 +5,6 @@ import Hero from './components/Hero';
 import WelcomeMessage from './components/WelcomeMessage';
 import LoveStory from './components/LoveStory';
 import ProposalStory from './components/ProposalStory';
-import JourneyGallery from './components/JourneyGallery';
 import Functionaries from './components/Functionaries';
 import OrderOfService from './components/OrderOfService';
 import PhotographyOrder from './components/PhotographyOrder';
@@ -56,9 +55,6 @@ function App() {
 
         {/* The Proposal */}
         <div id="proposal"><ProposalStory /></div>
-
-        {/* Our Journey in Photos */}
-        <div id="journey"><JourneyGallery /></div>
 
         {/* Functionaries */}
         <div id="functionaries"><Functionaries /></div>
