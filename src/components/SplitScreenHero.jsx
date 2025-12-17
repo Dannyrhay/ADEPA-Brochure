@@ -13,7 +13,7 @@ const SplitScreenHero = () => {
           <h1 className="split-hero__title">ADEPA</h1>
           <span className="split-hero__year">'25</span>
           <div className="split-hero__line"></div>
-          <p className="split-hero__tagline">A Love Story Worth Celebrating</p>
+          <p className="split-hero__tagline">A Love Story</p>
         </div>
       </div>
 
