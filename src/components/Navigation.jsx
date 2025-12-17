@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import DownloadPDF from './DownloadPDF';
+
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -42,6 +44,7 @@ const Navigation = () => {
         { title: "Photography", href: "#photography" },
         { title: "Pre-Wedding", href: "#pre-wedding" },
         { title: "Reception", href: "#reception" },
+        { title: "Wishes", href: "#wishes" },
         { title: "Appreciation", href: "#appreciation" },
     ];
 
@@ -83,6 +86,9 @@ const Navigation = () => {
                             </a>
                         </li>
                     ))}
+                    <li className="nav-drawer__item">
+                        <DownloadPDF onClose={closeMenu} />
+                    </li>
                 </ul>
 
                 <div className="nav-drawer__footer">

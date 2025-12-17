@@ -31,6 +31,8 @@ const Functionaries = () => {
 
   const mcs = ['Tracy Amo Nyarko', 'Grace Baah Buckman (BuckmanVoicedIt)'];
 
+  const giftTable = ['Nancy Benine', 'Rejoice Adobea Addo'];
+
   return (
     <section className="functionaries">
       <div className="container">
@@ -97,6 +99,15 @@ const Functionaries = () => {
             <h4 className="functionaries__card-title">MC</h4>
             <ul className="functionaries__list">
               {mcs.map((name, i) => (
+                <li key={i} className="functionaries__list-item">{name}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="functionaries__card">
+            <h4 className="functionaries__card-title">Gift Table</h4>
+            <ul className="functionaries__list">
+              {giftTable.map((name, i) => (
                 <li key={i} className="functionaries__list-item">{name}</li>
               ))}
             </ul>

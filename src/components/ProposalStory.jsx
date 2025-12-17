@@ -1,4 +1,5 @@
 import React from 'react';
+import proposalVideo from '../assets/IMG_0923.mp4';
 
 const ProposalStory = () => {
   return (
@@ -13,17 +14,10 @@ const ProposalStory = () => {
         {/* Content removed as requested, only video remains */}
 
         <div className="proposal-story__video-container">
-          <div className="proposal-story__video-placeholder">
-            <span className="proposal-story__video-icon">▶</span>
-            <p>Proposal Video Coming Soon</p>
-          </div>
-          {/* 
-                  To add the video later, replace the above placeholder div with:
-                  <video controls className="proposal-story__video">
-                      <source src="path/to/your/video.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                  </video>
-                */}
+          <video controls className="proposal-story__video" style={{ width: '100%', height: '100%', objectFit: 'contain' }}>
+            <source src={proposalVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         <div className="proposal__ring">

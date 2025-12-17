@@ -14,6 +14,7 @@ import Appreciation from './components/Appreciation';
 import Footer from './components/Footer';
 import Loader from './components/Loader';
 import Navigation from './components/Navigation';
+import WishesMessages from './components/WishesMessages';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -70,6 +71,9 @@ function App() {
 
         {/* Reception */}
         <div id="reception"><Reception /></div>
+
+        {/* Wishes and Messages */}
+        <div id="wishes"><WishesMessages /></div>
 
         {/* Appreciation */}
         <div id="appreciation"><Appreciation /></div>
