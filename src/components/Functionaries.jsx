@@ -4,7 +4,7 @@ const Functionaries = () => {
   const clergy = [
     { name: 'Very Rev. Dr. Abraham Boateng', title: 'Counselor and Lecturer, Trinity Theological Seminary' },
     { name: 'Rev. Patrick Darko', title: 'Gen. Superintendent ETBM' },
-    { name: 'Prophet Stephen ASK Ackrong', title: 'Focus Outreach Ministry' },
+    { name: 'Prophet Stephen ASK Ackrong', title: 'Focus outreach Movement' },
     { name: 'Apostle Stephen Gyan', title: 'Kings Love Chapel International' },
     { name: 'Pastor Nathaniel Osei Appiah', title: 'Elaia City Church' },
     { name: 'Rev. Kofi Asante', title: 'Elaia City Church' },
@@ -26,7 +26,7 @@ const Functionaries = () => {
   const champagnePoppers = [
     'Yohannes Dorgbazi', 'Barbara Armah', 'Selasie Atani', 'Abraham Ofori Henaku',
     'Benjamin Degraft Donkor', 'Kwaku Sarpong Debrah', 'Erasmus Sam', 'Baaba Daniels',
-    'Enoch Zoli', 'Derrick Opoku', 'Neil Armstrong Mortagbe'
+    'Enoch Zoli', 'Derrick Opoku', 'Neil Armstrong Mortagbe', 'Rosina Tenuo'
   ];
 
   const mcs = ['Tracy Amo Nyarko', 'Grace Baah Buckman (BuckmanVoicedIt)'];
@@ -45,7 +45,7 @@ const Functionaries = () => {
         <div className="functionaries__couple">
           <div className="functionaries__couple-card functionaries__couple-card--groom">
             <span className="functionaries__role-label">Groom</span>
-            <h3 className="functionaries__couple-name">Emmanuel Paintsil</h3>
+            <h3 className="functionaries__couple-name">Paintsil</h3>
           </div>
           <div className="functionaries__couple-heart">♥</div>
           <div className="functionaries__couple-card functionaries__couple-card--bride">

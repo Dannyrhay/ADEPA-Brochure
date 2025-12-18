@@ -1,34 +1,34 @@
 import React from 'react';
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
-    return (
-        <footer className="footer">
-            <div className="footer__container">
-                <div className="footer__thankyou">
-                    <span className="footer__thankyou-text">THANK YOU</span>
-                </div>
+  return (
+    <footer className="footer">
+      <div className="footer__container">
+        <div className="footer__thankyou">
+          <span className="footer__thankyou-text">THANK YOU</span>
+        </div>
 
-                <div className="footer__ornament">✦ ✦ ✦</div>
+        <div className="footer__ornament">✦ ✦ ✦</div>
 
-                <div className="footer__couple">
-                    <span className="footer__initials">E</span>
-                    <span className="footer__heart">♥</span>
-                    <span className="footer__initials">A</span>
-                </div>
+        <div className="footer__couple">
+          <span className="footer__initials">E</span>
+          <span className="footer__heart">♥</span>
+          <span className="footer__initials">A</span>
+        </div>
 
-                <div className="footer__hashtag">#ADEPA '25</div>
+        <div className="footer__hashtag">#ADEPA '25</div>
 
-                <div className="footer__bottom">
-                    <p className="footer__copyright">
-                        © {currentYear} Emmanuel & Adelaide Wedding
-                    </p>
-                    <p className="footer__blessing">Forever starts here ♥</p>
-                </div>
-            </div>
+        <div className="footer__bottom">
+          <p className="footer__copyright">
+            © {currentYear} Paintsil & Adelaide Wedding
+          </p>
+          <p className="footer__blessing">Forever starts here ♥</p>
+        </div>
+      </div>
 
-            <style>{`
+      <style>{`
         .footer {
           background: linear-gradient(180deg, var(--color-primary-dark) 0%, #1a2e18 100%);
           color: var(--color-text-inverse);
@@ -132,8 +132,8 @@ const Footer = () => {
           }
         }
       `}</style>
-        </footer>
-    );
+    </footer>
+  );
 };
 
 export default Footer;

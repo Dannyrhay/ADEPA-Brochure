@@ -15,7 +15,7 @@ const LoveStory = () => {
             <p>
               Our journey began at the <strong>University of Media, Arts and Communication</strong>,
               where we met as course mates during our master's program. Adelaide was the very first
-              friend Emmanuel made in class, and what started as a simple friendship quickly
+              friend Paintsil made in class, and what started as a simple friendship quickly
               blossomed into a special bond.
             </p>
 

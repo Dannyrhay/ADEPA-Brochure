@@ -1,25 +1,25 @@
 import React from 'react';
 
 const Hero = () => {
-    return (
-        <section className="hero">
-            <div className="hero__container">
-                <div className="hero__ornament">✦</div>
-                <p className="hero__pretext">Together with their families</p>
-                <h1 className="hero__names">
-                    <span className="hero__name">Emmanuel</span>
-                    <span className="hero__ampersand">&</span>
-                    <span className="hero__name">Adelaide</span>
-                </h1>
-                <p className="hero__posttext">Request the pleasure of your company</p>
-                <div className="hero__date-container">
-                    <div className="hero__line"></div>
-                    <p className="hero__date">December 2025</p>
-                    <div className="hero__line"></div>
-                </div>
-            </div>
+  return (
+    <section className="hero">
+      <div className="hero__container">
+        <div className="hero__ornament">✦</div>
+        <p className="hero__pretext">Together with their families</p>
+        <h1 className="hero__names">
+          <span className="hero__name">Paintsil</span>
+          <span className="hero__ampersand">&</span>
+          <span className="hero__name">Adelaide</span>
+        </h1>
+        <p className="hero__posttext">Request the pleasure of your company</p>
+        <div className="hero__date-container">
+          <div className="hero__line"></div>
+          <p className="hero__date">December 2025</p>
+          <div className="hero__line"></div>
+        </div>
+      </div>
 
-            <style>{`
+      <style>{`
         .hero {
           min-height: 60vh;
           display: flex;
@@ -136,8 +136,8 @@ const Hero = () => {
           }
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default Hero;

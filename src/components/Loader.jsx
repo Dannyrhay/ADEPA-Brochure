@@ -1,40 +1,40 @@
 import React, { useEffect, useState } from 'react';
 
 const Loader = ({ onLoaded }) => {
-    const [progress, setProgress] = useState(0);
-    const [isFading, setIsFading] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [isFading, setIsFading] = useState(false);
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setProgress((prev) => {
-                if (prev >= 100) {
-                    clearInterval(timer);
-                    setIsFading(true);
-                    setTimeout(onLoaded, 800); // Wait for fade out animation
-                    return 100;
-                }
-                return prev + 1; // Slower progress
-            });
-        }, 30); // 30ms * 100 = 3000ms total duration
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(timer);
+          setIsFading(true);
+          setTimeout(onLoaded, 800); // Wait for fade out animation
+          return 100;
+        }
+        return prev + 1; // Slower progress
+      });
+    }, 30); // 30ms * 100 = 3000ms total duration
 
-        return () => clearInterval(timer);
-    }, [onLoaded]);
+    return () => clearInterval(timer);
+  }, [onLoaded]);
 
-    return (
-        <div className={`loader ${isFading ? 'loader--fading' : ''}`}>
-            <div className="loader__content">
-                <div className="loader__heart">♥</div>
-                <h1 className="loader__title">ADEPA '25</h1>
-                <p className="loader__subtitle">Emmanuel & Adelaide</p>
+  return (
+    <div className={`loader ${isFading ? 'loader--fading' : ''}`}>
+      <div className="loader__content">
+        <div className="loader__heart">♥</div>
+        <h1 className="loader__title">ADEPA '25</h1>
+        <p className="loader__subtitle">Paintsil & Adelaide</p>
 
-                <div className="loader__progress-container">
-                    <div className="loader__progress-bar" style={{ width: `${progress}%` }}></div>
-                </div>
+        <div className="loader__progress-container">
+          <div className="loader__progress-bar" style={{ width: `${progress}%` }}></div>
+        </div>
 
-                <p className="loader__percentage">{progress}%</p>
-            </div>
+        <p className="loader__percentage">{progress}%</p>
+      </div>
 
-            <style>{`
+      <style>{`
         .loader {
           position: fixed;
           inset: 0;
@@ -140,8 +140,8 @@ const Loader = ({ onLoaded }) => {
           }
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Loader;
