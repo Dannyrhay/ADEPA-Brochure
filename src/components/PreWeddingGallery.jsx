@@ -143,9 +143,10 @@ const PreWeddingGallery = () => {
         .prewedding-gallery__image {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
           display: block;
           transition: transform var(--transition-slow);
+          background: #000;
         }
 
         .prewedding-gallery__item:hover .prewedding-gallery__image {

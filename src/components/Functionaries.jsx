@@ -45,7 +45,7 @@ const Functionaries = () => {
         <div className="functionaries__couple">
           <div className="functionaries__couple-card functionaries__couple-card--groom">
             <span className="functionaries__role-label">Groom</span>
-            <h3 className="functionaries__couple-name">Paintsil</h3>
+            <h3 className="functionaries__couple-name">Emmanuel Paintsil</h3>
           </div>
           <div className="functionaries__couple-heart">♥</div>
           <div className="functionaries__couple-card functionaries__couple-card--bride">
