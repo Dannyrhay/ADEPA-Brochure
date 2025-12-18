@@ -14,7 +14,7 @@ const Hero = () => {
         <p className="hero__posttext">Request the pleasure of your company</p>
         <div className="hero__date-container">
           <div className="hero__line"></div>
-          <p className="hero__date">December 2025</p>
+          <p className="hero__date">20th December 2025</p>
           <div className="hero__line"></div>
         </div>
       </div>
